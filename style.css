@@ -1,0 +1,304 @@
+html, body {
+    box-sizing: border-box;
+    background-color: #fff;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: url(images/background.jpg);
+    background-attachment: fixed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .afbeelding{
+      width: 100%; 
+  }
+
+.home-container{
+    display: grid;  
+    height: 100%;
+    grid-template: 200px 1fr 1fr 1fr 1fr / 20px 1fr 20px;  
+    grid-template-areas: 
+        ". h ."
+        ". n ."
+        ". m ."
+        ". w ."
+        ". f .";
+}
+
+.iconen-container{
+    display: grid;  
+    height: 100%;
+    grid-template: 200px 1fr 1fr 1fr / 20px 1fr 20px;  
+    grid-template-areas: 
+        ". h ."
+        ". n ."
+        ". m ."
+        ". f .";
+}
+
+.contact-container{
+    display: grid;  
+    height: 100%;
+    grid-template: 200px 1fr 1fr 1fr / 20px 1fr 20px;  
+    grid-template-areas: 
+        ". h ."
+        ". n ."
+        ". m ."
+        ". f .";
+}
+
+  
+.site-header{
+    background-image: url(images/header-image.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: h;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 5px 5px 5px #3d0000;
+    padding: 20px;
+    text-align: center;
+    }  
+
+    .geschiedenis{
+        background-image: url(images/geschiedenis-header.jpg);
+    } 
+
+    .iconen{
+        background-image: url(images/iconen-header.jpg);
+        background-position: top;
+    } 
+
+    .partys{
+        background-image: url(images/partys-header.jpg);
+    } 
+
+    .contact-header{
+        background-image: url(images/contact.jpg);
+    } 
+
+    nav{
+        grid-area: n;
+        background-color: #FE4202;
+    }
+
+    .site-nav{
+
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .site-nav > li{
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-family: verdana;
+    color:rgb(255, 255, 255)
+    }
+
+    .site-nav a{
+        color:#fff;
+        text-decoration: none;
+    }
+
+    .nav-active {
+        background-color: rgb(165, 46, 10);
+    }
+
+.site-main{
+    background-color: burlywood;
+    grid-area: m;
+    padding: 10px;
+    }
+
+.contact-main{
+    background-color:#E7C29C;
+    grid-area: m;
+    padding: 10px;
+    display: grid;  
+    height: 100%;
+    grid-template: auto auto auto / 1fr;  
+    grid-template-areas: 
+        "adres"
+        "form"
+        "kaart";
+    }
+
+    .adres{
+        grid-area: adres;
+    }
+
+    .formulier{
+        grid-area: form;
+    }
+
+    .kaart{
+        grid-area: kaart;
+    }
+
+    label {
+        display: block;
+    }
+
+    .site-main p{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .iconen-main{
+        background-color: burlywood;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        }
+
+
+        .iconen-main p{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .artist { 
+        background-color: #FE4202;
+        border-radius: 8px;
+        box-shadow: 1px 1px 10px #000;
+        }
+
+        .artist > img{
+            border-radius: 8px 8px 0 0;
+        }
+
+
+        .artist > h1{
+            padding: 0 10px;
+            color: #fff
+          }
+
+          .artist > p{
+            padding: 0 10px;
+            color: #fff
+          }
+
+        .contactdetails{
+            list-style-type: none; /* Remove bullets */
+            padding: 0; /* Remove padding */
+        }
+
+
+
+        
+.widget-area{
+    background-color: darkolivegreen;
+    grid-area: w;
+    padding: 10px;
+    }
+
+    .widget-area p{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.8em;
+    }
+        
+.site-footer{
+    background-color: steelblue;
+    grid-area: f;
+    padding: 20px;
+    }
+
+    .embed-container { 
+        position: relative; 
+        padding-bottom: 56.25%; 
+        height: 0; 
+        overflow: hidden; 
+        max-width: 100%; 
+    } 
+    
+    .embed-container iframe, .embed-container object, .embed-container embed { 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+    }
+
+
+
+@media (min-width: 768px) {
+    .home-container{
+        grid-template: 300px 70px auto 1fr / repeat(12, 1fr);  
+        grid-template-areas: 
+        ". h h h h h h h h h h ."
+        ". n n n n n n n n n n ."
+        ". m m m m m m m w w w ."
+        ". f f f f f f f f f f .";
+        }
+
+    .iconen-container{
+        grid-template: 300px 70px auto 1fr / repeat(12, 1fr);  
+        grid-template-areas: 
+        ". h h h h h h h h h h ."
+        ". n n n n n n n n n n ."
+        ". m m m m m m m m m m ."
+        ". f f f f f f f f f f .";
+        }    
+
+        .contact-container{
+            grid-template: 300px 70px auto 1fr / repeat(12, 1fr);  
+            grid-template-areas: 
+            ". h h h h h h h h h h ."
+            ". n n n n n n n n n n ."
+            ". m m m m m m m m m m ."
+            ". f f f f f f f f f f .";
+            } 
+
+        .iconen-main{
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            }
+
+            .contact-main{
+                background-color:#E7C29C;
+                grid-area: m;
+                padding: 10px;
+                display: grid;  
+                height: 100%;
+                grid-template: auto auto / 1fr 1fr;  
+                grid-template-areas: 
+                    "adres form"
+                    "kaart kaart";
+                }
+
+        .site-nav{
+            flex-direction: row;
+            height: 100%;
+            align-items: center;
+            }  
+
+            .nav-active{
+                margin: 2px;
+                border-radius: 5px;
+            }
+
+            .contact{
+                margin-left: auto;
+                    }
+
+        .iconen-main{
+                justify-content: space-between;
+            }
+    }
+
+
+    @media (min-width: 1024px) {
+        .iconen-main{
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            }
+        }
+
+
